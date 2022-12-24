@@ -15,4 +15,4 @@ These are my solutions.
 
 
 ### Day 01 - nano ###
-1. 
+1. Find the grouping with the greatest sum.

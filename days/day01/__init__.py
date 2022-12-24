@@ -8,6 +8,7 @@ class Problem:
     self.data = dataset
 
   def part1(self):
+    print(self.data)
     return False
 
   def part2(self):
@@ -22,7 +23,8 @@ def fetch(fpath):
   
   with open(fpath, "r") as infile:
     for line in infile:
-      dataset.append([int(i) for i in line.strip()])
+      print(line)
+      # dataset.append(int(line.strip()))
         
   return dataset
 
@@ -41,8 +43,8 @@ def solve(dataset):
 # --------------------------------------------------------------------------
 # do the main 
 def main():
-  # fpath = "./sample.txt" # this is the sample dataset.
-  fpath = "./data.txt"
+  fpath = "./sample.txt" # this is the sample dataset.
+  # fpath = "./data.txt"
   dataset = fetch(fpath)
   
   r1,r2 = solve(dataset)
