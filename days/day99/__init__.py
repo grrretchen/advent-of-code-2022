@@ -8,10 +8,10 @@ class Problem:
     self.data = dataset
 
   def part1(self):
-    return False
+    return "Hello"
 
   def part2(self):
-    return False
+    return "World"
 
 
 
