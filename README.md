@@ -14,3 +14,6 @@ These are my solutions.
 ### Day 01 - Calorie Counting ###
 1. Find the grouping of numbers with the greatest sum.
 2. Find the top 3 totals
+
+### Day 02 - Rock Paper Scissors ###
+1. Calculate a score based on the inputs of each player's hands
