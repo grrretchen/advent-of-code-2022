@@ -18,3 +18,6 @@ These are my solutions.
 ### Day 02 - [Rock Paper Scissors](https://adventofcode.com/2022/day/2)
 1. Calculate a score based on the inputs of each player's hands
 2. Calculate a score based on the strategy of the opponent's hand
+
+### Day 03 - [Rucksack Reorganization](https://adventofcode.com/2022/day/3)
+1. Determine sum of items from a list
