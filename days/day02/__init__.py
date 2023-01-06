@@ -9,6 +9,7 @@ class Problem:
     self.data = dataset
     self.clean = []
     self.map1 = [[0,0,0],[2,1,3],[3,2,1],[1,3,2]]
+    self.scoring = [[0,0,0],[2,1,3],[3,2,1],[1,3,2]]
 
     self.result1 = None
     self.result2 = None
@@ -24,13 +25,13 @@ class Problem:
   # plain map based on ABC,XYZ mapping to RPS (rock-paper-scissors)
   def part1(self):
     self.convert1()
-    scoring = [[0,0,0],[2,1,3],[3,2,1],[1,3,2]]
+    
     scores = []
     for e in self.clean:
       scores.append(
         [
-          e[0] + scoring[e[0]].index(e[1])*3,
-          e[1] + scoring[e[1]].index(e[0])*3
+          e[0] + self.scoring[e[0]].index(e[1])*3,
+          e[1] + self.scoring[e[1]].index(e[0])*3
         ]
       )
 
@@ -39,10 +40,20 @@ class Problem:
       "Player" : sum([e[1] for e in scores])
     }
 
-    pass
 
+  # where first element is the opponent's card, and the second element is the player's goal.
   def part2(self):
-    pass
+  	scores=[]
+  	for e in self.clean:
+  		scores.append([
+  			( ((3-e[1])*3) + e[0] ),
+  			( ((e[1]-1)*3) + self.scoring[e[0]][3-e[1]] )
+  		])
+  	
+  	self.result2 = {
+      "Opponent" : sum([e[0] for e in scores]),
+      "Player" : sum([e[1] for e in scores])
+    }
 
 
 # --------------------------------------------------------------------------
@@ -71,7 +82,7 @@ def solve(dataset):
 # do the main 
 def main():
   fpath = "./sample.txt" # this is the sample dataset.
-  # fpath = "./data.txt"
+  fpath = "./data.txt"
   dataset = fetch(fpath)
   
   r1,r2 = solve(dataset)
