@@ -29,3 +29,4 @@ These are my solutions.
 
 ### Day 05 - [Supply Stacks](https://adventofcode.com/2022/day/5)
 1. Re-arrange stacks of boxes and determine the top box on each stack.
+2. Re-arrange stacks of boxes using a FIFO pattern, and return the top box.
