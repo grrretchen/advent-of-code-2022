@@ -26,3 +26,6 @@ These are my solutions.
 ### Day 04 - [Camp Cleanup](https://adventofcode.com/2022/day/4)
 1. Find overlapping data where one set is completely contained within another.
 2. Find data with partial overlaps.
+
+### Day 05 - [Supply Stacks](https://adventofcode.com/2022/day/5)
+1. Re-arrange stacks of boxes and determine the top box on each stack.
