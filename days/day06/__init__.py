@@ -13,21 +13,31 @@ class Problem:
 
 
   # ------------------------------------------------------------------------
-  def part1(self):
-    pos = 4
+  def findStart(self, gap=4):
+    # the start of a payload is marked by [gap] number of unique characters.
+    pos = gap
     for row in self.dataset:
-      while pos < len(row)-4:
-        this = set(row[pos-4:pos])
-        if len(this) > 3:
-          self.result1 = pos
-          return(self.result1)
+      while pos < len(row):
+        # use "set" to create a pure list of unique characters.
+        this = set(row[pos-gap:pos])
+        if len(this) > gap-1:
+          return pos
         pos +=1 
+
+    return False
+
+
+  # ------------------------------------------------------------------------
+  def part1(self):
+    self.result1 = self.findStart(4)
 
     return(self.result1)
 
 
   # ------------------------------------------------------------------------
   def part2(self):
+    self.result2 = self.findStart(14)
+
     return(self.result2)
 
 

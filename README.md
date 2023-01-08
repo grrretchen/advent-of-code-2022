@@ -33,3 +33,4 @@ These are my solutions.
 
 ### Day 06 - [Tuning Trouble](https://adventofcode.com/2022/day/6)
 1. Find the first block of non-repeating characters.
+2. Same, but with a larger block.
