@@ -3,13 +3,15 @@
 # solution by gretchen.ostara@gmail.com fka pckeppel@gmail.com
 
 # ==========================================================================
+import copy
+
 class Problem:
   def __init__(self,dataset):
     self.stacks = []
     self.commands = []
-    self.restacked = []
     self.result1 = None
     self.result2 = None
+    self.restacked = []
 
     self.dataset = self.parse(dataset)
 
@@ -58,16 +60,22 @@ class Problem:
     for row in self.commands:
       print(row)
 
-    self.restacked = self.stacks.copy()
     return
 
 
   # ------------------------------------------------------------------------
-  def move(self):
+  def move(self, reverse=True):
     # move elements 1-by-1 from source to destination.
     for cmd in self.commands:
+      substack = []
       for i in range(0,cmd[0]):
-        self.restacked[cmd[2]-1].append(self.restacked[cmd[1]-1].pop())
+        substack.insert(0,self.restacked[cmd[1]-1].pop())
+
+      # use this value to toggle the substack from FIFO to LIFO.
+      if reverse:
+        substack.reverse()
+    
+      self.restacked[cmd[2]-1] = self.restacked[cmd[2]-1] + substack
     
     for row in self.restacked:
       print(row)
@@ -75,15 +83,26 @@ class Problem:
 
   # ------------------------------------------------------------------------
   def part1(self):
-    self.move()
+    self.restacked = copy.deepcopy(self.stacks)
+
+    # in part 1, we can only move one element at a time, so we set "reverse" as true to do LIFO.
+    self.move(reverse=True)
     result = "".join([i[-1] for i in self.restacked])
 
     self.result1 = result
+    print(self.result1)
     return(self.result1)
 
 
   # ------------------------------------------------------------------------
   def part2(self):
+    self.restacked = copy.deepcopy(self.stacks)
+
+    # in part 2, we can move multiple elements at the same time, so we set "reverse" as false to maintain order.
+    self.move(reverse=False)
+    result = "".join([i[-1] for i in self.restacked])
+
+    self.result2 = result
     return(self.result2)
 
 
