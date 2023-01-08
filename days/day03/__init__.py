@@ -23,10 +23,38 @@ class Problem:
     self.result1 = sum
     return(sum)
 
-    print(sum)
+  # ------------------------------------------------------------------------
   def part2(self):
-    pass
-    
+    # store groups of records
+    group = []
+
+    # track the overall total
+    sum = 0
+
+    for row in self.dataset:
+      group.append(row)
+
+      # The list must be processed in groups of 3. If we don't have three records yet, then escape to the next cycle.
+      if len(group) < 3:
+        continue
+
+      # store each of the 3 records for shorthand.
+      g1 = set(list(group[0]))
+      g2 = set(list(group[1]))
+      g3 = set(list(group[2]))
+
+      # find the single unique element across all three lists and look up the value
+      r = [x for x in g1 if x in [y for y in g2 if y in g3]]
+      x = self.rank.find(r[0])+1
+
+      # add the value to the sum, then reset the loop.
+      sum += x
+      print(r, g1, g2, g3)
+      group = []
+
+    # set the class result to the sum, and return the value.
+    self.result2 = sum
+    return(sum)    
 
 # --------------------------------------------------------------------------
 # pull the dataset from a file 

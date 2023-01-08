@@ -21,3 +21,4 @@ These are my solutions.
 
 ### Day 03 - [Rucksack Reorganization](https://adventofcode.com/2022/day/3)
 1. Determine sum of items from a list
+2. Calculate the sum within groups of 3
