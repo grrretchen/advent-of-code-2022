@@ -10,13 +10,21 @@ class Problem:
     self.result2 = None
     self.rank = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
+  # ------------------------------------------------------------------------
   def part1(self):
+    # track the overall total
     sum = 0
     for row in self.dataset:
+
+      # each row must be split in half
       l = int(len(row)/2)
       p1 = set(list(row[:l]))
       p2 = set(list(row[l:]))
+
+      # find the unique item between both groups
       r = [x for x in p1 if x in p2]
+
+      # look up the value of the item, and add it to the sum.
       x = self.rank.find(r[0])+1
       sum += x
     
@@ -49,7 +57,6 @@ class Problem:
 
       # add the value to the sum, then reset the loop.
       sum += x
-      print(r, g1, g2, g3)
       group = []
 
     # set the class result to the sum, and return the value.
