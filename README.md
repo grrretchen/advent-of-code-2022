@@ -22,3 +22,7 @@ These are my solutions.
 ### Day 03 - [Rucksack Reorganization](https://adventofcode.com/2022/day/3)
 1. Determine sum of items from a list
 2. Calculate the sum within groups of 3
+
+### Day 04 - [Camp Cleanup](https://adventofcode.com/2022/day/4)
+1. Find overlapping data where one set is completely contained within another.
+2. Find data with partial overlaps.
