@@ -11,6 +11,26 @@ class Problem:
 
   # ------------------------------------------------------------------------
   def part1(self):
+    overlap = 0
+    for row in self.dataset:
+      # the dataset is formatted like "2-4,5-7", with each group representing a range of numbers.
+
+      group = []
+      for g in [g.split("-") for g in row.split(",")]:
+        group.append([int(e) for e in g])
+
+      # after splitting the row, then compare the second digits.
+      group.sort()
+      if group[0][0] == group[1][0]:
+        overlap +=1
+      elif group[0][0] < group[1][0]:
+        if group[0][1] >= group[1][1]:
+          overlap += 1
+      else:
+        print("%s\t%s\t%s"%(group[0],group[1],group[0][1] >= group[1][1]))
+
+    self.result1 = overlap
+    print(overlap)
     pass
 
   # ------------------------------------------------------------------------
