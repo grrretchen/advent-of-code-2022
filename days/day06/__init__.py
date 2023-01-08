@@ -9,15 +9,20 @@ class Problem:
   def __init__(self,dataset):
     self.result1 = None
     self.result2 = None
-    self.dataset = self.parse(dataset)
-
-  # ------------------------------------------------------------------------
-  def parse(self, dataset):    
-    return
+    self.dataset = dataset
 
 
   # ------------------------------------------------------------------------
   def part1(self):
+    pos = 4
+    for row in self.dataset:
+      while pos < len(row)-4:
+        this = set(row[pos-4:pos])
+        if len(this) > 3:
+          self.result1 = pos
+          return(self.result1)
+        pos +=1 
+
     return(self.result1)
 
 
@@ -52,7 +57,7 @@ def solve(dataset):
 # do the main 
 def main():
   fpath = "./sample.txt" # this is the sample dataset.
-  # fpath = "./data.txt"
+  fpath = "./data.txt"
   dataset = fetch(fpath)
   
   r1,r2 = solve(dataset)
