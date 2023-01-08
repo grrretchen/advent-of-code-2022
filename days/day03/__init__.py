@@ -5,12 +5,25 @@
 # ==========================================================================
 class Problem:
   def __init__(self,dataset):
+    self.dataset = dataset
     self.result1 = None
     self.result2 = None
-    
+    self.rank = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
   def part1(self):
-    pass
+    sum = 0
+    for row in self.dataset:
+      l = int(len(row)/2)
+      p1 = set(list(row[:l]))
+      p2 = set(list(row[l:]))
+      r = [x for x in p1 if x in p2]
+      x = self.rank.find(r[0])+1
+      sum += x
     
+    self.result1 = sum
+    return(sum)
+
+    print(sum)
   def part2(self):
     pass
     
