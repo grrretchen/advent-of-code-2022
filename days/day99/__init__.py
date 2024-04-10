@@ -1,6 +1,5 @@
-# trans rights are human rights
-#
-# solution by gretchen.ostara@gmail.com fka pckeppel@gmail.com
+# solution by gretchen.keppel@gmail.com fka pckeppel@gmail.com
+# protect trans kids
 
 # ==========================================================================
 class Problem:
@@ -54,5 +53,3 @@ def main():
 if __name__ == "__main__" :
   result = main()
   print(f"Part 1:  {result[0]}\r\nPart 2:  {result[1]}")
-
-# protect trans kids
