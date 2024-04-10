@@ -1,6 +1,5 @@
-# trans rights are human rights
-#
-# solution by gretchen.ostara@gmail.com fka pckeppel@gmail.com
+# solution by gretchen.keppel@gmail.com fka pckeppel@gmail.com
+# protect trans kids
 
 # ==========================================================================
 import copy
@@ -65,5 +64,3 @@ def main():
 if __name__ == "__main__" :
   result = main()
   print(result)
-
-# protect trans kids
