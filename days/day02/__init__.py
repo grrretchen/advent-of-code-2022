@@ -81,8 +81,8 @@ def solve(dataset):
 # --------------------------------------------------------------------------
 # do the main 
 def main():
-  fpath = "./sample.txt" # this is the sample dataset.
-  fpath = "./data.txt"
+  fpath = "./test.txt" # this is the sample dataset.
+  fpath = "./input.txt"
   dataset = fetch(fpath)
   
   r1,r2 = solve(dataset)
