@@ -1,4 +1,7 @@
-# solution by gretchen.keppel@gmail.com fka pckeppel@gmail.com
+# Advent of Code 2022 - Day 06
+# https://adventofcode.com/2022/day/6
+#
+# solution by gretchen.keppel@gmail.com
 # protect trans kids
 
 # ==========================================================================

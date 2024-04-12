@@ -1,4 +1,7 @@
-# solution by gretchen.keppel@gmail.com fka pckeppel@gmail.com
+# Advent of Code 2022 - Day 01
+# https://adventofcode.com/2022/day/1
+#
+# solution by gretchen.keppel@gmail.com
 # protect trans kids
 
 # ==========================================================================
@@ -51,7 +54,7 @@ def solve(dataset):
 # --------------------------------------------------------------------------
 # do the main 
 def main():
-  fpath = "./sample.txt" # this is the sample dataset.
+  fpath = "./test.txt" # this is the sample dataset.
   fpath = "./input.txt"
   dataset = fetch(fpath)
   

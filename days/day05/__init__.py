@@ -1,4 +1,7 @@
-# solution by gretchen.keppel@gmail.com fka pckeppel@gmail.com
+# Advent of Code 202 - Day 05
+# https://adventofcode.com/2022/day/5
+#
+# solution by gretchen.keppel@gmail.com
 # protect trans kids
 
 # ==========================================================================
